@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest>
+  <control
+    namespace="Component"
+    constructor="FileUploader"
+    version="1.7.0"
+    display-name-key="File Uploader"
+    description-key="Multi-file picker with toast errors, blocking overlay, and gallery-friendly output.">
+
+    <resources>
+      <code path="index.ts" order="1" />
+      <css path="style.css" order="2" />
+    </resources>
+
+    <property name="ButtonLabel" display-name-key="Button Label" of-type="SingleLine.Text" default-value="Upload Files" usage="bound" />
+    <property name="AllowMultiple" display-name-key="Allow Multiple Files" of-type="TwoOptions" default-value="true" usage="bound" />
+    <property name="MaxFileSizeMB" display-name-key="Max File Size (MB)" of-type="Decimal" default-value="5" usage="bound" />
+
+    <property name="ShowFileList" display-name-key="Show File List" of-type="TwoOptions" default-value="true" usage="bound" />
+    <property name="ShowFileCount" display-name-key="Show File Count" of-type="TwoOptions" default-value="true" usage="bound" />
+    <property name="ShowFileDetails" display-name-key="Show File Type and Size" of-type="TwoOptions" default-value="true" usage="bound" />
+
+    <property name="ErrorMessageText" display-name-key="Error Message Text" of-type="SingleLine.Text" default-value="This file is not allowed or exceeds the size limit." usage="bound" />
+    <property name="ToastDurationMS" display-name-key="Toast Duration (ms)" of-type="Whole.None" default-value="2500" usage="bound" />
+
+    <property name="IncludeImages" display-name-key="Allow Images (.jpg/.jpeg/.png/.gif)" of-type="TwoOptions" default-value="true" usage="bound" />
+    <property name="IncludeDocuments" display-name-key="Allow Documents (.pdf/.docx/.xlsx)" of-type="TwoOptions" default-value="true" usage="bound" />
+    <property name="IncludeTextCsv" display-name-key="Allow Text/CSV (.txt/.csv)" of-type="TwoOptions" default-value="false" usage="bound" />
+    <property name="IncludeMedia" display-name-key="Allow Media (.mp3/.mp4)" of-type="TwoOptions" default-value="false" usage="bound" />
+    <property name="CustomAcceptedTypes" display-name-key="Custom Accepted Types (.ext,.ext)" of-type="SingleLine.Text" usage="bound" />
+
+    <property name="ButtonBackgroundColor" display-name-key="Button Background Color" of-type="SingleLine.Text" default-value="#0078D4" usage="bound" />
+    <property name="ButtonTextColor" display-name-key="Button Text Color" of-type="SingleLine.Text" default-value="#FFFFFF" usage="bound" />
+    <property name="ButtonHoverColor" display-name-key="Button Hover Color" of-type="SingleLine.Text" default-value="#005A9E" usage="bound" />
+    <property name="ButtonBorderRadius" display-name-key="Button Border Radius (px)" of-type="Decimal" default-value="6" usage="bound" />
+    <property name="FileListTextColor" display-name-key="File List Text Color" of-type="SingleLine.Text" default-value="#333333" usage="bound" />
+    <property name="FileListRemoveColor" display-name-key="Remove Icon Color" of-type="SingleLine.Text" default-value="#D13438" usage="bound" />
+
+    <property name="FilesInitial" display-name-key="Initial Files (JSON)" of-type="SingleLine.Text" default-value="[]" usage="bound" />
+    <property name="FilesOutput" display-name-key="Files Output" of-type="SingleLine.Text" usage="output" />
+
+    <property name="Reset" display-name-key="Reset" of-type="TwoOptions" default-value="false" usage="input"/>
+
+    <feature-usage>
+      <uses-feature name="HTML5" required="true" />
+    </feature-usage>
+  </control>
+</manifest>
